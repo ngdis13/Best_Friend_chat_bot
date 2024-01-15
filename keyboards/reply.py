@@ -28,7 +28,7 @@ main = ReplyKeyboardMarkup(
 sub = ReplyKeyboardMarkup(
     keyboard=[
         [
-        KeyboardButton(text='время'),
+        KeyboardButton(text='оформить подписку'),
         KeyboardButton(text='поменять время'),
         KeyboardButton(text='отменить подписку')
     ],
