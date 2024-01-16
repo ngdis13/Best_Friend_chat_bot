@@ -1,0 +1,2 @@
+pip install aiogram
+pip install -U g4f   #установка gpt (окружение не менее python 3.10)
