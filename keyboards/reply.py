@@ -69,5 +69,4 @@ emotional_diary = ReplyKeyboardMarkup(
     resize_keyboard=True
 )
 
-
 rmk = ReplyKeyboardRemove()

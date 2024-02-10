@@ -23,10 +23,6 @@ async def echo(message: Message):
 
 
 
-    elif msg == 'начать диалог с другом':
-        await message.answer("Привет, мой дорогой друг, как ты себя чувствуешь?", reply_markup=reply.dialog)
-    # if msg == 'начать диалог':
-    #     await message.answer("диалог с другом:", reply_markup=reply.dialog)    подключить чат джп
     elif msg == 'закончить диалог':
         await message.answer("Хорошо поболтали, возвращайся снова, я всегда рядом!")
 

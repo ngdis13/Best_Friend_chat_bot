@@ -6,8 +6,12 @@ from aiogram.utils.formatting import (
 )
 from aiogram.filters import Command, CommandObject
 
+from aiogram import types
+
 
 from keyboards import reply
+
+from chat_ai_connect import chat_ai
 
 router = Router()
 
@@ -35,6 +39,18 @@ async def start(message: Message):
             'Я всегда на связи, мой дорогой друг!',
             marker=''
     )
+
     )
     await message.answer(**content.as_kwargs(), reply_markup=reply.main)
+
+@router.message()
+async def friend_dialog(message: types.Message):
+    await message.answer('Привет! Я твой друг, расскажи, как твои дела?')
+
+    while True:
+        if message.text != 'закончить диалог':
+            msg = message.text
+            await message.answer(chat_ai.ChatAi.gpt_chat(msg))
+            print(msg)
+            continue
 
